@@ -311,8 +311,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gnumdk/eolie/releases/download/0.5/eolie-0.5.tar.xz",
-          "sha256": "5cd8076db9790b79badd34e4e0e2737fd1e331f3667ffa49724d7ee448817de8"
+          "url": "https://github.com/gnumdk/eolie/releases/download/0.6/eolie-0.6.tar.xz",
+          "sha256": "0e1fc356eaffdc60f932ca5e1b6754d5a436e320dd580e04571b8423c9b6002c"
         }
       ]
     }
