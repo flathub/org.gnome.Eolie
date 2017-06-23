@@ -38,6 +38,18 @@
       }]
     },
     {
+      "name": "gtkspell3",
+      "config-opts": [
+        "--disable-gtk-doc"
+      ],
+      "cleanup": [ "*.la", "/share/gtk-doc" ],
+      "sources": [{
+        "type": "archive",
+        "url": "https://sourceforge.net/projects/gtkspell/files/3.0.9/gtkspell3-3.0.9.tar.xz",
+        "sha256": "a4f4a4a2789f7499563e26d96b22d8085222ebe278da47d026b2de782b8b4d26"
+      }]
+    },
+    {
       "name": "git",
       "sources": [{
         "type": "archive",
