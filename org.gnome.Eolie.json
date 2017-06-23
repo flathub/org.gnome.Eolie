@@ -20,8 +20,6 @@
     "--filesystem=~/.mozilla/firefox:rw",
     "--filesystem=~/.config/chromium:rw",
     "--filesystem=~/.config/chrome:rw",
-    "--filesystem=/usr/share/hunspell:ro",
-    "--filesystem=/usr/share/myspell:ro",
     "--talk-name=org.freedesktop.secrets",
     "--own-name=org.gnome.Eolie.Proxy.*",
     "--talk-name=ca.desrt.dconf",
