@@ -16,6 +16,7 @@
     "--env=SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
 
     "--filesystem=xdg-run/dconf",
+    "--filesystem=home",
     "--filesystem=~/.config/dconf:rw",
     "--filesystem=~/.mozilla/firefox:rw",
     "--filesystem=~/.config/chromium:rw",
