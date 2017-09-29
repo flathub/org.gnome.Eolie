@@ -89,7 +89,7 @@
       "buildsystem": "simple",
        "build-commands": [
             "mkdir /app/share/myspell",
-            "cp -ax * /app/share/myspell"
+            "cp * /app/share/myspell"
       ],
       "cleanup": [],
       "sources": [{
