@@ -59,16 +59,6 @@
       }]
     },
     {
-      "name": "python-gobject",
-      "_comment": "Fix https://bugzilla.gnome.org/show_bug.cgi?id=731501",
-      "cleanup": [ "*.la", "/share/gtk-doc" ],
-      "sources": [{
-        "type": "archive",
-        "url": "https://adishatz.org/pygobject-3.26.0.tar.xz",
-        "sha256": "b952272969f05afc039a990990bb1bafba0d4627fb113cb615a8a2818a86eefb"
-      }]
-    },
-    {
       "name": "hunspell",
       "buildsystem": "simple",
        "build-commands": [
@@ -380,8 +370,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gnumdk/eolie/releases/download/0.9.4/eolie-0.9.4.tar.xz",
-          "sha256": "0db7d935cd102675b6ec0499b8ef876c9605059c78929b6d1973eb6b1ffe827f"
+          "url": "https://github.com/gnumdk/eolie/releases/download/0.9.5/eolie-0.9.5.tar.xz",
+          "sha256": "05362bfc94e45bafd3a7393d57fb77237f343757707baf69698ffd49399b0b5d"
         }
       ]
     }
