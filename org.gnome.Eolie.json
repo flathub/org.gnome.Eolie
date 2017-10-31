@@ -352,6 +352,18 @@
         }]
     },
     {
+       "name": "python-dateutil",
+       "buildsystem": "simple",
+       "build-commands": [
+            "pip3 install --prefix=/app python_dateutil-2.6.1-py2.py3-none-any.whl"
+       ],
+       "sources": [{
+          "type": "file",
+          "url": "https://pypi.python.org/packages/4b/0d/7ed381ab4fe80b8ebf34411d14f253e1cf3e56e2820ffa1d8844b23859a2/python_dateutil-2.6.1-py2.py3-none-any.whl#md5=342c025339de1e7c2138c74983c111d7",
+          "sha256": "95511bae634d69bc7329ba55e646499a842bc4ec342ad54a8cdb65645a0aad3c"
+        }]
+    },
+    {
        "name": "PyFxA",
        "buildsystem": "simple",
        "build-commands": [
