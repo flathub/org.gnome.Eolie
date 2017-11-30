@@ -382,8 +382,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gnumdk/eolie/releases/download/0.9.13/eolie-0.9.13.tar.xz",
-          "sha256": "c9702c17f6b6b5176dece4405dbb8cb2859bd48edd953b14a8af7840ba6117ce"
+          "url": "https://github.com/gnumdk/eolie/releases/download/0.9.14/eolie-0.9.14.tar.xz",
+          "sha256": "bdb3ec7973fda992d14bb7c5cdcd739aa6a461173c56c913f54f0dacd9e208d2"
         }
       ]
     }
