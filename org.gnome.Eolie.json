@@ -382,8 +382,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/gnumdk/eolie/uploads/36c49be5d7342a6663ecaded3e122d35/eolie-0.9.33.tar.xz",
-          "sha256": "b60a3ad8c59c71e936ad20373a5abbea2563a33c7055025a90311cc1d50f7059"
+          "url": "https://gitlab.gnome.org/gnumdk/eolie/uploads/c49bf004e9ad09337bd70eb60780c728/eolie-0.9.34.tar.xz",
+          "sha256": "9bbc824e14844cf20875ea6ec814b37f8a1cb8826a14d578f88d46b2b9823ee2"
         }
       ]
     }
