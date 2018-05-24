@@ -75,20 +75,6 @@
       }]
     },
     {
-      "name": "myspell",
-      "buildsystem": "simple",
-       "build-commands": [
-            "mkdir /app/share/myspell",
-            "cp * /app/share/myspell"
-      ],
-      "cleanup": [],
-      "sources": [{
-        "type": "archive",
-        "url": "https://adishatz.org/myspell.tar.gz",
-        "sha256": "1147cf82f03bda6a09eeab3488fac09d25e0cf640fb1cb5d365658cc0ef6e82e"
-      }]
-    },
-    {
       "name": "git",
       "buildsystem": "simple",
        "build-commands": [
