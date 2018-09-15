@@ -368,8 +368,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/eolie/uploads/aa9759e329b975a630fb27167570c0c7/eolie-0.9.35.tar.xz",
-          "sha256": "c6e69c4f3416ac08250c1fa2f3837c7b5edcd7cb89c12ab95c62a6000a13180f"
+          "url": "https://gitlab.gnome.org/World/eolie/uploads/e494ec1d43c61b1fafd48e2e41015168/eolie-0.9.36.tar.xz",
+          "sha256": "0fc319499138f5ebed972ef74346df4d7967afaa33428da5263ee75f65d340a7"
         }
       ]
     }
