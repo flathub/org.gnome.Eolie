@@ -364,12 +364,11 @@
     {
       "name": "Eolie",
       "buildsystem": "meson",
-      "builddir": true,
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/World/eolie/uploads/e494ec1d43c61b1fafd48e2e41015168/eolie-0.9.36.tar.xz",
-          "sha256": "0fc319499138f5ebed972ef74346df4d7967afaa33428da5263ee75f65d340a7"
+          "url": "https://gitlab.gnome.org/World/eolie/-/archive/0.9.37/eolie-0.9.37.tar.gz",
+          "sha256": "a97cc01f467ade2db2378545f8e77edbfbf7f3fdc6b4f10c320063101dfd6ff6"
         }
       ]
     }
