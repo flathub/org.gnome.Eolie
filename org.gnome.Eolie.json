@@ -366,9 +366,10 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "type": "archive",
-          "url": "https://gitlab.gnome.org/World/eolie/-/archive/0.9.37/eolie-0.9.37.tar.gz",
-          "sha256": "a97cc01f467ade2db2378545f8e77edbfbf7f3fdc6b4f10c320063101dfd6ff6"
+          "type": "git",
+          "url": "https://gitlab.gnome.org/World/eolie.git",
+          "tag": "0.9.37",
+          "commit": "91199a1806c7f1029704fcdd85a49fa856f37464"
         }
       ]
     }
