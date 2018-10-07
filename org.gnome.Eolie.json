@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Eolie",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.28",
+  "runtime-version": "3.30",
   "sdk": "org.gnome.Sdk",
   "command": "eolie",
   "finish-args": [
@@ -368,8 +368,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/World/eolie.git",
-          "tag": "0.9.39",
-          "commit": "68237a06df2324cb2a25f2b741220d94f416da61"
+          "tag": "0.9.41",
+          "commit": "f7a5a2314333eee720bcdb8729b94570a87c98dc"
         }
       ]
     }
