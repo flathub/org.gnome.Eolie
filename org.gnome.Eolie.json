@@ -35,8 +35,8 @@
       "cleanup": [ "*.la", "/share/gtk-doc" ],
       "sources": [{
         "type": "archive",
-        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.4.tar.xz",
-        "sha256": "2a56aa5d2d8cd912f2bce17f174713d2c417ca298f1f9c28ee66d4aa1e1d9e62"
+        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.4.tar.xz",
+        "sha256": "dfd78591901df7853eab7e56a86c34a1b03635da0d3d56b89aa577f1897865da"
       }]
     },
     {
@@ -45,8 +45,8 @@
       "cleanup": [ "*.la", "/share/gtk-doc" ],
       "sources": [{
         "type": "archive",
-        "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.12.4.tar.xz",
-        "sha256": "1c165b8d888ed350acd8e6ac9f6fe06508e6fcc0a3afc6ccc9fbeb30df9be522"
+        "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.14.4.tar.xz",
+        "sha256": "ac02d837f166c35ff6ce0738e281680d0b90052cfb1f0255dcf6aaca5f0f6d23"
       }]
     },
     {
@@ -54,8 +54,8 @@
       "cleanup": [ "*.la", "/share/gtk-doc" ],
       "sources": [{
         "type": "archive",
-        "url": "https://sourceforge.net/projects/gtkspell/files/3.0.9/gtkspell3-3.0.9.tar.xz",
-        "sha256": "a4f4a4a2789f7499563e26d96b22d8085222ebe278da47d026b2de782b8b4d26"
+        "url": "https://sourceforge.net/projects/gtkspell/files/3.0.10/gtkspell3-3.0.10.tar.xz",
+        "sha256": "b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732"
       }]
     },
     {
@@ -85,8 +85,8 @@
       ],
       "sources": [{
         "type": "archive",
-        "url": "https://www.kernel.org/pub/software/scm/git/git-2.13.0.tar.xz",
-        "sha256": "4bbf2ab6f2341253a38f95306ec7936833eb1c42572da5c1fa61f0abb2191258"
+        "url": "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.19.1.tar.gz",
+        "sha256": "ec4dc96456612c65bf6d944cee9ac640145ec7245376832b781cb03e97cbb796"
       }]
     },
     {
