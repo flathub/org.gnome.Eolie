@@ -108,18 +108,6 @@
       ]
     },
     {
-      "name": "git",
-      "make-args": ["NO_PERL=1"],
-      "make-install-args": ["NO_PERL=1"],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.19.1.tar.gz",
-          "sha256": "ec4dc96456612c65bf6d944cee9ac640145ec7245376832b781cb03e97cbb796"
-        }
-      ]
-    },
-    {
       "name": "python-requests",
       "buildsystem": "simple",
       "build-commands": [
