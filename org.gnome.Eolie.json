@@ -109,13 +109,8 @@
     },
     {
       "name": "git",
-      "buildsystem": "simple",
-      "build-commands": [
-        "./configure --prefix=/app",
-        "make",
-        "make strip",
-        "make install"
-      ],
+      "make-args": ["NO_PERL=1"],
+      "make-install-args": ["NO_PERL=1"],
       "sources": [
         {
           "type": "archive",
