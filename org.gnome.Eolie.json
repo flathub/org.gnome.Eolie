@@ -223,7 +223,7 @@
       "name": "cryptography",
       "buildsystem": "simple",
       "build-commands": [
-        "python3 setup.py install --prefix=/app --root=/"
+        "python3 setup.py install --prefix=/app --root=/ --skip-build"
       ],
       "sources": [
         {
