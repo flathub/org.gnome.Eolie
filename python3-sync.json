@@ -2,7 +2,7 @@
     "name": "python3-sync",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} requests requests-hawk PyFxA pycrypto beautifulsoup4 cryptography setuptools wheel beautifulsoup4 six mohawk hawkauthlib cffi pycparser PyYAML PyBrowserID pyparsing packaging asn1crypto WebOb idna Naked shellescape python-dateutil"
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} requests requests-hawk PyFxA pycrypto beautifulsoup4 cryptography setuptools wheel beautifulsoup4 six mohawk hawkauthlib cffi pycparser PyYAML PyBrowserID pyparsing packaging asn1crypto WebOb idna Naked shellescape python-dateutil setuptools_scm"
     ],
     "sources": [
         {
@@ -24,6 +24,11 @@
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz",
             "sha256": "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/54/85/514ba3ca2a022bddd68819f187ae826986051d130ec5b972076e4f58a9f3/setuptools_scm-3.2.0.tar.gz",
+            "sha256": "52ab47715fa0fc7d8e6cd15168d1a69ba995feb1505131c3e814eb7087b57358"
         },
         {
             "type": "file",
