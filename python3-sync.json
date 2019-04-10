@@ -2,18 +2,13 @@
     "name": "python3-sync",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} requests-hawk PyFxA pycrypto beautifulsoup4 cryptography setuptools wheel"
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} requests requests-hawk PyFxA pycrypto beautifulsoup4 cryptography setuptools wheel beautifulsoup4 six mohawk hawkauthlib cffi pycparser PyYAML PyBrowserID pyparsing packaging asn1crypto WebOb idna Naked shellescape python-dateutil"
     ],
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz",
-            "sha256": "a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/9d/1a/0c89c070ee2829c934cb6c7082287c822e28236a4fcf90063e6be7c35532/WebOb-1.8.5.tar.gz",
-            "sha256": "05aaab7975e0ee8af2026325d656e5ce14a71f1883c52276181821d6d5bf7086"
+            "url": "https://files.pythonhosted.org/packages/2d/a9/607867518bd49d0362031fdb81f06aaf71b6141ff75c04ba11b18f16037e/soupsieve-1.9.tar.gz",
+            "sha256": "e41a65e99bd125972d84221022beb1e4b5cfc68fa12c170c39834ce32d1b294c"
         },
         {
             "type": "file",
@@ -27,18 +22,33 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz",
-            "sha256": "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
-        },
-        {
-            "type": "file",
             "url": "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz",
             "sha256": "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/64/7c/27367b38e6cc3e1f49f193deb761fe75cda9f95da37b67b422e62281fcac/cffi-1.12.2.tar.gz",
-            "sha256": "e113878a446c6228669144ae8a56e268c91b7f1fafae927adc4879d9849e0ea7"
+            "url": "https://files.pythonhosted.org/packages/ad/99/5b2e99737edeb28c71bcbec5b5dda19d0d9ef3ca3e92e3e925e7c0bb364c/python-dateutil-2.8.0.tar.gz",
+            "sha256": "c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/dd/72/797570d91fd1ba785966c43f12d5a6dec40438ba727dd02dbf636032b0a1/shellescape-3.4.1.tar.gz",
+            "sha256": "e618b2bc13f2553315ca1669995dc10fcc2cae5f1e0fda49035ef02d56f0b358"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/62/0e/7b009568d9bbd8c0e659f1ea286e68d80f4cc31daa18447299c39445541f/Naked-0.1.31.tar.gz",
+            "sha256": "12b76b8a14595d07039422f1d2219ca8fbef8b237f9cdf5d8e947c03e148677e"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz",
+            "sha256": "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/9d/1a/0c89c070ee2829c934cb6c7082287c822e28236a4fcf90063e6be7c35532/WebOb-1.8.5.tar.gz",
+            "sha256": "05aaab7975e0ee8af2026325d656e5ce14a71f1883c52276181821d6d5bf7086"
         },
         {
             "type": "file",
@@ -47,18 +57,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/2d/a9/607867518bd49d0362031fdb81f06aaf71b6141ff75c04ba11b18f16037e/soupsieve-1.9.tar.gz",
-            "sha256": "e41a65e99bd125972d84221022beb1e4b5cfc68fa12c170c39834ce32d1b294c"
+            "url": "https://files.pythonhosted.org/packages/16/51/d72654dbbaa4a4ffbf7cb0ecd7d12222979e0a660bf3f42acc47550bf098/packaging-19.0.tar.gz",
+            "sha256": "0c98a5d0be38ed775798ece1b9727178c4469d9c3b4ada66e8e6b7849f8732af"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz",
-            "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/26/b7/0ec2846e5e2b3591ca867d7b06b67b5242f73bfe6da164b7232b8bffc657/hawkauthlib-2.0.0.tar.gz",
-            "sha256": "effd64a2572e3c0d9090b55ad2180b36ad50e7760bea225cb6ce2248f421510d"
+            "url": "https://files.pythonhosted.org/packages/5d/3a/24d275393f493004aeb15a1beae2b4a3043526e8b692b65b4a9341450ebe/pyparsing-2.4.0.tar.gz",
+            "sha256": "1873c03321fc118f4e9746baf201ff990ceb915f433f23b395f5580d1840cb2a"
         },
         {
             "type": "file",
@@ -67,13 +72,33 @@
         },
         {
             "type": "file",
+            "url": "https://files.pythonhosted.org/packages/9f/2c/9417b5c774792634834e730932745bc09a7d36754ca00acf1ccd1ac2594d/PyYAML-5.1.tar.gz",
+            "sha256": "436bc774ecf7c103814098159fbb84c2715d25980175292c648f2da143909f95"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz",
+            "sha256": "a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/64/7c/27367b38e6cc3e1f49f193deb761fe75cda9f95da37b67b422e62281fcac/cffi-1.12.2.tar.gz",
+            "sha256": "e113878a446c6228669144ae8a56e268c91b7f1fafae927adc4879d9849e0ea7"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/26/b7/0ec2846e5e2b3591ca867d7b06b67b5242f73bfe6da164b7232b8bffc657/hawkauthlib-2.0.0.tar.gz",
+            "sha256": "effd64a2572e3c0d9090b55ad2180b36ad50e7760bea225cb6ce2248f421510d"
+        },
+        {
+            "type": "file",
             "url": "https://files.pythonhosted.org/packages/f2/05/e9a7e8e8194f77d40f32ef9fba96d3d3bcdd55d3057c3cd6e34b0b1959b2/mohawk-1.0.0.tar.gz",
             "sha256": "fca4e34d8f5492f1c33141c98b96e168a089e5692ce65fb747e4bb613f5fe552"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz",
-            "sha256": "502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e"
+            "url": "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz",
+            "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
         },
         {
             "type": "file",
@@ -109,6 +134,11 @@
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/8a/62/e89d4e23847f74f56c66a0ae76c17e356338a0fe7bd352842647f5877a07/requests-hawk-1.0.0.tar.gz",
             "sha256": "aef0dff8053dcae2057774516386bed0a3bc03fabea9e18f3aa98f02672ea5d0"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz",
+            "sha256": "502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e"
         }
     ]
 }
