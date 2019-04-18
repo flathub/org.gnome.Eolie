@@ -161,7 +161,7 @@
       "sources": [{
         "type": "archive",
         "url": "https://files.pythonhosted.org/packages/53/ec/23dd5cbd5e950543fdd30d91ddac4f56e395d14316677aa4cb78a029f8e2/hawkauthlib-2.0.0-py2.py3-none-any.whl",
-        "sha256": "935878d3a75832aa76f78ddee13491f1466cbd69a8e7e4248902763cf9953ba9 "
+        "sha256": "935878d3a75832aa76f78ddee13491f1466cbd69a8e7e4248902763cf9953ba9"
       }]
     },
     {
