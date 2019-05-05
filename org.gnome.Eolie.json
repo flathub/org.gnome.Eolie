@@ -100,8 +100,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/World/eolie.git",
-          "tag": "0.9.60",
-          "commit": "a4b59e53d93f15b4d0a20d0cb773d313c790aab5"
+          "tag": "0.9.61",
+          "commit": "e1f2dfd1117ba005a975a9567e09083bfa38fa3d"
         }
       ]
     }
