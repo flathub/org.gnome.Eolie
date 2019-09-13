@@ -247,6 +247,10 @@
           "url": "https://gitlab.gnome.org/World/eolie.git",
           "tag": "0.9.63",
           "commit": "656b1ec6e1ae4f3db22de853ca03d1dcadd463af"
+        },
+        {
+          "type": "patch",
+          "path": "appdata_fix.patch"
         }
       ]
     }
