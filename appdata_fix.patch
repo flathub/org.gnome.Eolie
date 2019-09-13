@@ -1,0 +1,45 @@
+--- a/data/org.gnome.Eolie.appdata.xml.in	2019-09-13 16:41:05.379685389 +0200
++++ b/data/org.gnome.Eolie.appdata.xml.in	2019-09-13 16:48:48.597772883 +0200
+@@ -1,15 +1,16 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <component type="desktop-application">
+- <id>org.gnome.Eolie</id>
+- <launchable type="desktop-id">org.gnome.Eolie.desktop</launchable>
+- <metadata_license>CC0-1.0</metadata_license>
+- <project_license>GPL-3.0+</project_license>
+- <name>Eolie</name>
+- <summary>Web browser</summary>
+- <description>
+-	<p>Eolie is a new GNOME web browser.</p>
+- </description>
+- <releases>
++  <id>org.gnome.Eolie</id>
++  <launchable type="desktop-id">org.gnome.Eolie.desktop</launchable>
++  <metadata_license>CC0-1.0</metadata_license>
++  <project_license>GPL-3.0+</project_license>
++  <name>Eolie</name>
++  <summary>Web browser</summary>
++  <description>
++    <p>Eolie is a new GNOME web browser.</p>
++  </description>
++  <releases>
++    <release version="0.9.63" date="2019-08-22" />
+     <release version="0.9.62" date="2019-05-21">
+       <description>
+         <ul>
+@@ -18,11 +19,13 @@
+       </description>
+     </release>
+   </releases>
+- <screenshots>
++  <screenshots>
+     <screenshot type="default">
+       <image>https://adishatz.org/eolie.jpg</image>
+     </screenshot>
+- </screenshots>
++  </screenshots>
++  <translation type="gettext">eolie</translation>
++  <content_rating type="oars-1.0" />
+   <url type="homepage">https://wiki.gnome.org/Apps/Eolie</url>
+   <url type="bugtracker">https://gitlab.gnome.org/World/eolie/issues</url>
+   <url type="donation">https://www.paypal.me/lollypopgnome</url>
