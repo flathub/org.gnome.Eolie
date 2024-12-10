@@ -1,0 +1,167 @@
+From 002038f04f74ff28dfc1a26384b179eb7296fca5 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C4=90o=C3=A0n=20Tr=E1=BA=A7n=20C=C3=B4ng=20Danh?=
+ <congdanhqx@gmail.com>
+Date: Mon, 22 Apr 2024 18:47:29 +0700
+Subject: [PATCH 1/2] eolie: port to libsoup-3.0
+
+---
+ eolie/application.py    |  4 ++--
+ eolie/css_stylesheet.py | 14 ++++----------
+ eolie/helper_task.py    | 12 +++++++-----
+ 3 files changed, 13 insertions(+), 17 deletions(-)
+
+diff --git a/eolie/application.py b/eolie/application.py
+index 9c4db69b..bb76e061 100644
+--- a/eolie/application.py
++++ b/eolie/application.py
+@@ -12,8 +12,8 @@
+ 
+ import gi
+ gi.require_version('Gtk', '3.0')
+-gi.require_version('WebKit2', '4.0')
+-gi.require_version('Soup', '2.4')
++gi.require_version('WebKit2', '4.1')
++gi.require_version('Soup', '3.0')
+ gi.require_version('Secret', '1')
+ gi.require_version('GtkSpell', '3.0')
+ gi.require_version("Handy", "1")
+diff --git a/eolie/css_stylesheet.py b/eolie/css_stylesheet.py
+index 3be5187c..2f7c2162 100644
+--- a/eolie/css_stylesheet.py
++++ b/eolie/css_stylesheet.py
+@@ -126,18 +126,12 @@ class StyleSheet(GObject.Object):
+         """
+         try:
+             session = Soup.Session.new()
+-            request = session.request(uri)
+-            stream = request.send(self.__cancellable)
+-            bytes = bytearray(0)
+-            buf = stream.read_bytes(1024, self.__cancellable).get_data()
+-            while buf:
+-                bytes += buf
+-                buf = stream.read_bytes(1024, self.__cancellable).get_data()
+-            stream.close()
++            msg = Soup.Message.new("GET", uri)
++            content = session.send_and_read(msg, self.__cancellable)
+             try:
+-                return bytes.decode("utf-8")
++                return content.decode("utf-8")
+             except:
+-                return bytes.decode("iso8859-1")
++                return content.decode("iso8859-1")
+         except Exception as e:
+             Logger.error("StyleSheet::__get_uri_contents(): %s -> %s" %
+                          (e, uri))
+diff --git a/eolie/helper_task.py b/eolie/helper_task.py
+index 20d35e39..c31a1587 100644
+--- a/eolie/helper_task.py
++++ b/eolie/helper_task.py
+@@ -11,7 +11,7 @@
+ # along with this program. If not, see <http://www.gnu.org/licenses/>.
+ 
+ import gi
+-gi.require_version("Soup", "2.4")
++gi.require_version("Soup", "3.0")
+ from gi.repository import GLib, Soup
+ 
+ from threading import Thread
+@@ -63,11 +63,13 @@ class TaskHelper:
+         """
+         try:
+             session = Soup.Session.new()
+-            session.set_property("accept-language-auto", True)
++            session.set_accept_language_auto(True)
+             if self.__user_agent is not None:
+-                session.set_property("user-agent", self.__user_agent)
+-            request = session.request(uri)
+-            request.send_async(cancellable,
++                session.set_user_agent(self.__user_agent)
++            msg = Soup.Message.new("GET", uri)
++            session.send_async(msg,
++                               GLib.PRIORITY_DEFAULT,
++                               cancellable,
+                                self.__on_request_send_async,
+                                callback,
+                                cancellable,
+-- 
+GitLab
+
+
+From fc523278b42e90f65e53ce1995cfb7f532cf2010 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C4=90o=C3=A0n=20Tr=E1=BA=A7n=20C=C3=B4ng=20Danh?=
+ <congdanhqx@gmail.com>
+Date: Mon, 22 Apr 2024 18:48:27 +0700
+Subject: [PATCH 2/2] python-3.12: Use raw string for regex
+
+---
+ eolie/css_rule_import.py |  2 +-
+ eolie/css_rule_list.py   |  2 +-
+ eolie/css_rule_style.py  | 10 +++++-----
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/eolie/css_rule_import.py b/eolie/css_rule_import.py
+index a0449aa0..8acb7ee3 100644
+--- a/eolie/css_rule_import.py
++++ b/eolie/css_rule_import.py
+@@ -32,7 +32,7 @@ class CSSImportRule:
+         self.__stylesheet = None
+         try:
+             parsed = urlparse(uri)
+-            search = re.search('@import url\(["\']?([^"\')]*)', css)
++            search = re.search(r'@import url\(["\']?([^"\')]*)', css)
+             css = search.group(1)
+             if css.startswith(".."):
+                 path_split = parsed.path.split("/")
+diff --git a/eolie/css_rule_list.py b/eolie/css_rule_list.py
+index 510954d2..0338c260 100644
+--- a/eolie/css_rule_list.py
++++ b/eolie/css_rule_list.py
+@@ -35,7 +35,7 @@ class CSSRuleList:
+         for child in self.__get_children(css):
+             child = child.strip()
+             # Remove any comment
+-            child = re.sub("\/\*[^*]*[^/]*\*\/", "", child)
++            child = re.sub(r"\/\*[^*]*[^/]*\*\/", "", child)
+             if child.startswith("@media"):
+                 rule = CSSMediaRule(child, uri, cancellable)
+             elif child.startswith("@supports"):
+diff --git a/eolie/css_rule_style.py b/eolie/css_rule_style.py
+index 6c7447b6..ebbef74f 100644
+--- a/eolie/css_rule_style.py
++++ b/eolie/css_rule_style.py
+@@ -121,7 +121,7 @@ class CSSStyleRule:
+             @return str
+         """
+         value = re.sub('[ ]*!.*important', '', value)
+-        value = re.sub('url.*\([^\)]*\)', 'url()', value)
++        value = re.sub(r'url.*\([^\)]*\)', 'url()', value)
+         return value.strip()
+ 
+     def __contains_color(self, value):
+@@ -228,9 +228,9 @@ class CSSStyleRule:
+         """
+         results = {}
+         # Extract values from rgb() and rgba()
+-        colors = re.findall('(rgb.?\([^\)]*\))', rule)
++        colors = re.findall(r'(rgb.?\([^\)]*\))', rule)
+         for color in colors:
+-            color_tuple = re.search('rgb.?\(([^\)]*)', color)
++            color_tuple = re.search(r'rgb.?\(([^\)]*)', color)
+             if color_tuple is None:
+                 continue
+             split = self.__get_split(color_tuple[1])
+@@ -251,9 +251,9 @@ class CSSStyleRule:
+         """
+         results = {}
+         # Extract values from hsl() and hsla()
+-        colors = re.findall('(hsl.?\([^\)]*\))', rule)
++        colors = re.findall(r'(hsl.?\([^\)]*\))', rule)
+         for color in colors:
+-            color_tuple = re.search('hsl.?\(([^\)]*)', color)
++            color_tuple = re.search(r'hsl.?\(([^\)]*)', color)
+             if color_tuple is None:
+                 continue
+             split = self.__get_split(color_tuple[1])
+-- 
+GitLab
+

@@ -1,0 +1,54 @@
+From ae5ea154051990a006a52a4859d076bf5d0b48e2 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ball=C3=B3=20Gy=C3=B6rgy?= <ballogyor@gmail.com>
+Date: Sun, 18 Aug 2024 11:09:04 +0200
+Subject: [PATCH] Disable Firefox Sync
+
+It's broken, see: https://gitlab.gnome.org/World/eolie/-/issues/392
+---
+ data/SettingsDialog.ui   | 2 +-
+ eolie/application.py     | 2 +-
+ eolie/dialog_settings.py | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/data/SettingsDialog.ui b/data/SettingsDialog.ui
+index 1d075f2c..e7680cc4 100644
+--- a/data/SettingsDialog.ui
++++ b/data/SettingsDialog.ui
+@@ -682,7 +682,7 @@
+     </child>
+     <child>
+       <object class="HdyPreferencesPage">
+-        <property name="visible">True</property>
++        <property name="visible">False</property>
+         <property name="can-focus">False</property>
+         <property name="icon-name">org.gnome.Eolie-firefox</property>
+         <property name="title" translatable="yes">Firefox sync</property>
+diff --git a/eolie/application.py b/eolie/application.py
+index 9c4db69b..4cd7a367 100644
+--- a/eolie/application.py
++++ b/eolie/application.py
+@@ -291,7 +291,7 @@ class Application(Gtk.Application, NightApplication):
+ 
+         # First init sync worker
+         from eolie.firefox_sync import SyncWorker
+-        if SyncWorker.check_modules():
++        if False and SyncWorker.check_modules():
+             self.sync_worker = SyncWorker()
+             self.sync_worker.pull_loop()
+         else:
+diff --git a/eolie/dialog_settings.py b/eolie/dialog_settings.py
+index 63128262..9b22c5f4 100644
+--- a/eolie/dialog_settings.py
++++ b/eolie/dialog_settings.py
+@@ -354,7 +354,7 @@ class SettingsDialog:
+                                      GLib.Variant("b", False))
+             self.__firefox_sync_button.set_sensitive(False)
+             from eolie.firefox_sync import SyncWorker
+-            if not SyncWorker.check_modules():
++            if True or not SyncWorker.check_modules():
+                 cmd =\
+                  "$ pip3 install requests-hawk PyFxA pycrypto cryptography"
+                 self.__status_row.set_subtitle(cmd)
+-- 
+GitLab
+

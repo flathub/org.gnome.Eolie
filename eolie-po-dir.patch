@@ -1,0 +1,34 @@
+From 0d41769216f810d8b12ae02a8d2b3c2711b23a4b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ball=C3=B3=20Gy=C3=B6rgy?= <ballogyor@gmail.com>
+Date: Thu, 29 Aug 2024 20:12:02 +0000
+Subject: [PATCH] Fix path for po_dir
+
+---
+ data/meson.build | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/data/meson.build b/data/meson.build
+index e85b5c75..0501d7b2 100644
+--- a/data/meson.build
++++ b/data/meson.build
+@@ -34,7 +34,7 @@ endif
+ i18n.merge_file(
+   output: project_id + '.desktop',
+   input: project_id + '.desktop.in',
+-  po_dir: join_paths(meson.source_root(), 'po'),
++  po_dir: join_paths(meson.source_root(), 'subprojects', 'po'),
+   type: 'desktop',
+   install: true,
+   install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'applications')
+@@ -54,7 +54,7 @@ endif
+ i18n.merge_file(
+   output: project_id + '.appdata.xml',
+   input: project_id + '.appdata.xml.in',
+-  po_dir: join_paths(meson.source_root(), 'po'),
++  po_dir: join_paths(meson.source_root(), 'subprojects', 'po'),
+   install: true,
+   install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'metainfo')
+ )
+-- 
+GitLab
+
