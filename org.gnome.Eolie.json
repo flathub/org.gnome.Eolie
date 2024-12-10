@@ -67,7 +67,8 @@
             "paths": [
               "eolie-disable-firefox-sync.patch",
               "eolie-libsoup3.patch",
-              "eolie-po-dir.patch"
+              "eolie-po-dir.patch",
+              "appdata_fix.patch"
             ]
           }
         ]
